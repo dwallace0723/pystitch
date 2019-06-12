@@ -48,8 +48,8 @@ class ValidateCommand(BaseCommand):
             "Installing test dependencies…",
             [sys.executable, "-m", "pip", "install"] + tests_require,
         )
-        self._run("Running black…", [sys.executable, "-m", "black", f"{here}/slack"])
-        self._run("Running flake8…", [sys.executable, "-m", "flake8", f"{here}/slack"])
+        self._run("Running black…", [sys.executable, "-m", "black", f"{here}/pystitch"])
+        self._run("Running flake8…", [sys.executable, "-m", "flake8", f"{here}/pystitch"])
 
 
 class UploadCommand(BaseCommand):

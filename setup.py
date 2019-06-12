@@ -87,7 +87,7 @@ class UploadCommand(BaseCommand):
 
 
 setup(
-    name="pystitch",
+    name="pystitchconnect",
     version=__version__,
     description="Python SDK for Stitch Connect API.",
     keywords="stitch",

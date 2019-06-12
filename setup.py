@@ -11,6 +11,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     README = f.read()
 
+tests_require = ["flake8", "black"]
+
 
 class BaseCommand(Command):
     """Base Command"""
@@ -95,7 +97,7 @@ setup(
     install_requires=[
         'requests>=2.22.0'
     ],
-    tests_require=["flake8", "black"],
+    tests_require=tests_require,
     cmdclass={"upload": UploadCommand, "validate": ValidateCommand},
     python_requires=">=3.6",
     license="MIT",

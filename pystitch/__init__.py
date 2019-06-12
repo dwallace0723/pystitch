@@ -1,1 +1,1 @@
-from pystitch.client import PyStitch
+from pystitch.client import PyStitch # noqa

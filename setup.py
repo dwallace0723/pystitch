@@ -1,15 +1,18 @@
 import os
 import subprocess
 import sys
+from shutil import rmtree
 from setuptools import setup, find_packages, Command
+import codecs
 
 __version__ = None
 exec(open("pystitch/version.py").read())
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
-    README = f.read()
+long_description = ""
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as readme:
+    long_description = readme.read()
 
 tests_require = ["flake8", "black"]
 
@@ -88,7 +91,7 @@ setup(
     version=__version__,
     description="Python SDK for Stitch Connect API.",
     keywords="stitch",
-    long_description=README,
+    long_description=long_description,
     long_description_content_type='text/markdown',
     url="https://github.com/dwallace0723/pystitch",
     author="David Wallace",

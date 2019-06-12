@@ -36,6 +36,5 @@ class PyStitch:
 
     def start_replication_job(self, source_id: int) -> dict:
         url_suffix = f"/sources/{source_id}/sync"
-        data = {'source_id': source_id}
-        resp = self._post(url_suffix=url_suffix, data=data)
+        resp = self._post(url_suffix=url_suffix)
         return resp

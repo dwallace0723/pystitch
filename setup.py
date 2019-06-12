@@ -6,7 +6,7 @@ from setuptools import setup, find_packages, Command
 __version__ = None
 exec(open("pystitch/version.py").read())
 
-here = os.path.abspath(path.dirname(__file__))
+here = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     README = f.read()

@@ -32,6 +32,11 @@ class PyStitch:
         resp = self._get(url_suffix='/sources')
         return resp
 
+    def list_streams(self, source_id: int) -> list:
+        url_suffix = f"/sources/{source_id}/streams"
+        resp = self._get(url_suffix=url_suffix)
+        return resp
+
     def start_replication_job(self, source_id: int) -> dict:
         url_suffix = f"/sources/{source_id}/sync"
         resp = self._post(url_suffix=url_suffix)

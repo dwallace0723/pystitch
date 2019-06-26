@@ -28,8 +28,20 @@ class PyStitch:
         response.raise_for_status()
         return response.json()
 
+    def list_destinations(self):
+        resp = self._get(url_suffix="/destinations")
+        return resp
+
+    def get_source(self, source_id: int) -> dict:
+        resp = self._get(url_suffix=f"/sources/{source_id}")
+        return resp
+
     def list_sources(self) -> list:
-        resp = self._get(url_suffix='/sources')
+        resp = self._get(url_suffix="/sources")
+        return resp
+
+    def get_stream_schema(self, source_id: int, stream_id: int) -> dict:
+        resp = self._get(url_suffix=f"/sources/{source_id}/streams/{stream_id}")
         return resp
 
     def list_streams(self, source_id: int) -> list:

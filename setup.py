@@ -1,6 +1,7 @@
-import os
-from setuptools import setup, find_packages
 import codecs
+import os
+
+from setuptools import find_packages, setup
 
 __version__ = None
 exec(open("pystitch/version.py").read())

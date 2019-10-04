@@ -4,11 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = ">=2.22.0"
 
 [dev-packages]
+pystitch = {path = ".", editable = true}
+isort = "*"
+flake8 = "*"
+pytest = "*"
+tox = "*"
 
 [requires]
-python_version = "3.7"
 
 [pipenv]
